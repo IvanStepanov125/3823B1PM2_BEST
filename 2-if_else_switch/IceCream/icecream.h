@@ -5,5 +5,6 @@ int icecream(int x){
         return 1;
     else if (((x % 5 == 3) || (x % 5 == 1)) && (x > 5))
         return 1;
-    else 0;
+    else 
+        return 0;
 }
