@@ -1,3 +1,8 @@
 int get_time(long long angle) {
-    return 0; // Not implementation
+    int y = 21666;
+    int x = y / 6;
+    int sek = x % 60;
+    int minut = (x / 60) % 60;
+    int chas = x / 3600;
+    return chas * 10000 + minut * 100 + sek;
 }

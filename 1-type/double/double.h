@@ -1,11 +1,17 @@
+#include <math.h>
 bool compare_double(double x, double y) {
-    return true; // Not implementation
+    double e = 0.00000001;
+    if (fabs(x - y) < e) return true;
+    else return false;
 }
 
 int get_nearest_int(double x) {
-    return 0; // Not implementation
+    int y = x;
+    if (((x - y) >= 0.5) && (x > 0)) return (y + 1);
+    else if (((x - y) <= -0.5) && (x < 0)) return (y - 1);
+    else return y;
 }
 
 double get_fractional(double x) {
-    return 0.1; // Not implementation
+    return x - floor(x);
 }
