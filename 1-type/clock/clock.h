@@ -1,5 +1,5 @@
 int get_time(long long angle) {
-    int y = 21666;
+    int y = angle;
     int x = y / 6;
     int sek = x % 60;
     int minut = (x / 60) % 60;
