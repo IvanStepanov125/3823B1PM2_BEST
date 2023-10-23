@@ -2,7 +2,6 @@
 
 int get_score(short score, int start, int stop, int now) {
     double raznica = ((double)score / 2) / (stop - start);
-    printf("%lf\n", raznica);
     if (now <= start){
         return score;
         }
