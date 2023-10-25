@@ -10,7 +10,7 @@ char find_bin_pattern(int number){
                 flag += 1;
             else if (flag == 2){
                 kol += 1;
-                flag = 0;
+                flag = 1;
                 }
             else
                 flag = 1;
