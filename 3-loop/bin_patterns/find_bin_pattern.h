@@ -18,7 +18,6 @@ char find_bin_pattern(int number){
         if (x % 2 == 0){
             if (flag == 1)
                 flag += 1;
-                
             else
                 flag = 0;
         }
