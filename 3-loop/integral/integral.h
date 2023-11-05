@@ -6,7 +6,6 @@ double integral(double a, double b, double c, double left, double right){
     double otv = yrav2 - yrav1;
     if (otv < 0)
         return -1;
-
     else
         return otv;
 }

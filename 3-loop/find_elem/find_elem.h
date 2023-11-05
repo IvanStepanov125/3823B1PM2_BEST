@@ -12,7 +12,11 @@ int find_elem(int left, int right, int number, int max_iter){
         else if (c < poisk)
             le = c + 1;
         else if (c > poisk)
-            ri = c - 1;  
+            ri = c - 1;
+        if (i > poisk){
+            i = 0;
+            flag = 0;
+            }
     }
-    return i * (poisk - left); //НЕ МЕНЯТЬ!
+    return i; //НЕ МЕНЯТЬ!
 }
