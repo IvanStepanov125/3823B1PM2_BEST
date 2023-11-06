@@ -12,7 +12,7 @@ double limit(double eps, int n_max){
         double x1 = 0.0;
         double x2 = 0.0;    
         for (int i = 1; i < maksim + 1; i ++){
-            s = i / sqrt(i * i + i);
+            s = (double)i / sqrt(i * i + i);
             x1 = x2;
             x2 = s;
             if (fabs(x2 - x1) <= toch)
@@ -20,4 +20,5 @@ double limit(double eps, int n_max){
         }
     }
     return s;
+
 }
