@@ -12,19 +12,11 @@ int shislo(int mas1[], int mas2[], int a1, int b1, int a2, int b2,int a3, int b3
     return count;
 }
 
-int find_matrix_kernel(int matrix[], int kernel[], int matrix_size, int kernel_size){
-    int dl1 = sqrt(matrix_size);
-    int vis1 = sqrt(matrix_size);
-    if (matrix_size == 12){
-        dl1 = 4;
-        vis1 = 3;
-    }
-    if (matrix_size == 45){
-        dl1 = 9;
-        vis1 = 5;
-    }
-    int dl2 = sqrt(kernel_size);
-    int vis2 = sqrt(kernel_size);
+int find_matrix_kernel(int matrix[], int kernel[], int matrix_row, int matrix_col, int kernel_row, int kernel_col){
+    int dl1 = matrix_col;
+    int vis1 = matrix_row;
+    int dl2 = kernel_col;
+    int vis2 = kernel_row;
     int raz1 = dl1 - dl2;
     int raz2 = vis1 - vis2; 
     int new_raz = (raz1 + 1) * (raz2 + 1);
