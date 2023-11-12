@@ -3,8 +3,13 @@
 
 
 void test_find_matrix_kernel() {
-    int matrix1[] = {0, 0, 0, 0, 1, 0, 0, 0, 0};
-    int kernel1[] = {0, 0, 0, 0, 1, 0, 0, 0, 0};
+    int matrix1[] = {0, 0, 0, 
+                     0, 1, 0,
+                     0, 0, 0};
+
+    int kernel1[] = {0, 0, 0,
+                     0, 1, 0,
+                     0, 0, 0};
 
     int matrix2[] = {1, 1, 1, 1, 1, 
                      1, 1, 1, 1, 1,
