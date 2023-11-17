@@ -15,7 +15,7 @@ int* matrix_multy(int* A, int aM, int aN, int* B, int bM, int bN){
                 mass[k] += A[aM * i + j] * B[aM * j + i]; 
             }
         }
-        
+        аа
     }
     int *p = mass;
     return p;
