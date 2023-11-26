@@ -178,7 +178,11 @@ void search(int* pozic, int raz, int size, int* arry, int* pic1){
             f_1(pozic, tec, size, arry, raz);
     }
     else if (pozic[0] % size == (size - 1)){
-        f_2(pozic, tec, size, arry, raz);
+        if (pic1[raz - 2 * size] == 1){
+            f_2(pozic, size + 1, size, arry, raz);
+        }
+        else 
+            pozic[1] = 9;
     }
 
     else if (tr(size, arry, raz, pic1, tec, pozic, 0) == 0){
@@ -241,11 +245,11 @@ void search(int* pozic, int raz, int size, int* arry, int* pic1){
                 f_7(pozic, tec, size, arry, raz);
         }
         else if (pozic[1] == 5){
-            if (pic1[tec - size + 1] == 1)
-                f_1(pozic, tec, size, arry, raz);
-
-            else if (pic1[tec - size] == 1)
+            if (pic1[tec - size] == 1)
                 f_2(pozic, tec, size, arry, raz);
+
+            else if (pic1[tec - size + 1] == 1)
+                f_1(pozic, tec, size, arry, raz);
             
             else if (pic1[tec + 1] == 1)
                 f_8(pozic, tec, size, arry, raz);
@@ -361,7 +365,7 @@ void find_loops(int* pic, int size, int* num_loop, int* start_row, int* start_co
         }
 
         int rez = pozic[0];
-
+        int rez1 = pozic[2];
         *num_loop = pozic[2];
         *start_row = start / new_size;
         *start_col = start % new_size;
