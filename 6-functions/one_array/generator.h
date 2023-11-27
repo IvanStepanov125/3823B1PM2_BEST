@@ -7,7 +7,6 @@ int* array_generator(int* real_size, int k, int m, int f){
     for (int i = 0; i < *real_size; i++){
         mass[i] == 0;
     }
-    
     mass[0] = f;
     return mass;
 }
