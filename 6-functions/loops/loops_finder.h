@@ -1,6 +1,19 @@
 #include <math.h>
 #include <stdlib.h>
 
+int generator(int* mass, int tec, int size){
+    mass[0] = 0;
+    mass[1] = tec - size + 1;
+    mass[2] = tec - size;
+    mass[3] = tec - size - 1;
+    mass[4] = tec - 1;
+    mass[5] = tec + size - 1;
+    mass[6] = tec + size;
+    mass[7] = tec + size + 1;
+    mass[8] = tec + 1;
+    return *mass;
+}
+
 void dob_hod(int* arry, int raz, int poz){
     for (int i = 0; i < raz; i++){
         if (arry[i] == 0){
@@ -24,15 +37,7 @@ int repetition(int* arry, int raz, int poz){
 int tr(int size, int* arry, int raz, int* pic1, int tec, int* pozic, int fl){
     int flag = 0;
     int* vozmozhn1 = (int*)malloc(9 * sizeof(int));
-    vozmozhn1[0] = 0;
-    vozmozhn1[1] = tec - size + 1;
-    vozmozhn1[2] = tec - size;
-    vozmozhn1[3] = tec - size - 1;
-    vozmozhn1[4] = tec - 1;
-    vozmozhn1[5] = tec + size - 1;
-    vozmozhn1[6] = tec + size;
-    vozmozhn1[7] = tec + size + 1;
-    vozmozhn1[8] = tec + 1;
+    generator(vozmozhn1, tec, size);
     int ed = 0;
     int id = 0;
     for (int i = 1; i < 9; i ++){
@@ -61,6 +66,20 @@ int tr(int size, int* arry, int raz, int* pic1, int tec, int* pozic, int fl){
         return 0;
     }    
 }
+int poisk(int* arry, int raz, int* pozic, int size, int* pic1){
+    for (int i = 1; i < raz; i++){
+        if (arry[i] == 0)
+            return 0;
+        else if (raz - size >= arry[i]){
+            int t = 0;
+            t = tr(size, arry, raz, pic1, arry[i], pozic, 1);
+            if (t != 1){
+                return 1;
+            }
+        }
+    }
+    return 0;
+    }
 
 // void f_n(int* pozic, int tec, int size, int* arry, int raz, int chekable_pos, int prev_pos){
 //     if (repetition(arry, raz, chekable_pos)){
@@ -305,15 +324,7 @@ void search(int* pozic, int raz, int size, int* arry, int* pic1){
     
     else if (tr(size, arry, raz, pic1, tec, pozic, 0)){
         int* vozmozhn = (int*)malloc(9 * sizeof(int));
-        vozmozhn[0] = 0;
-        vozmozhn[1] = tec - size + 1;
-        vozmozhn[2] = tec - size;
-        vozmozhn[3] = tec - size - 1;
-        vozmozhn[4] = tec - 1;
-        vozmozhn[5] = tec + size - 1;
-        vozmozhn[6] = tec + size;
-        vozmozhn[7] = tec + size + 1;
-        vozmozhn[8] = tec + 1;
+        generator(vozmozhn, tec, size);
         int base = -1;
         for (int j = 1; j < 9; j++){
             if (pic1[vozmozhn[j]] == 1){
@@ -325,6 +336,9 @@ void search(int* pozic, int raz, int size, int* arry, int* pic1){
         if (base == 0){
             pozic[2] += 1;
         }
+        else if (poisk(arry, raz, pozic, size, pic1) == 1)
+            pozic[2] += 1;
+
         else {
             pozic[1] = 9;
         }     
