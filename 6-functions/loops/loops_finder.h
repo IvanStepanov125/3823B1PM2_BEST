@@ -70,7 +70,7 @@ int poisk(int* arry, int raz, int* pozic, int size, int* pic1){
     for (int i = 1; i < raz; i++){
         if (arry[i] == 0)
             return 0;
-        else if (raz - size >= arry[i]){
+        else if ((raz - size >= arry[i]) && (arry[i] % size != (size - 1))){
             int t = 0;
             t = tr(size, arry, raz, pic1, arry[i], pozic, 1);
             if (t != 1){
@@ -197,9 +197,8 @@ void search(int* pozic, int raz, int size, int* arry, int* pic1){
             f_1(pozic, tec, size, arry, raz);
     }
     else if (pozic[0] % size == (size - 1)){
-        if (pic1[raz - 2 * size] == 1){
-            f_2(pozic, size + 1, size, arry, raz);
-        }
+        if (pic1[tec - size] == 1)
+            f_2(pozic, tec, size, arry, raz);
         else 
             pozic[1] = 9;
     }
