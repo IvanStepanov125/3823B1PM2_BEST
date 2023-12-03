@@ -10,6 +10,6 @@ void DelSymbol1(char *str, char sym){
             j ++;
         }
     }
-    str[j] = "\0";
+    str[j] = '\0';
 }
 
