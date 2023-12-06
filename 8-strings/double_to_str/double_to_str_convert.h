@@ -2,5 +2,6 @@
 #include <string.h>
 
 char* convert(double number){
+    
     return NULL;
 }
