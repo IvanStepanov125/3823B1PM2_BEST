@@ -61,13 +61,6 @@ char* convert(double number1){
         str[k] = 48;
         k++;
     }
-    str[k] = 0;
-
-    for (int i=0; i < k + 1; i++){
-        char s = str[i];
-        int ss = 10;
-        
-    }
-    
+    str[k] = 0;  
     return str;
 }
