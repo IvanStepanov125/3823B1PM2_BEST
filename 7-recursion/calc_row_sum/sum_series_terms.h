@@ -21,13 +21,12 @@ double sum_series(int n){
         for (int i = 1; i < flag1; i++){
             count += f((i-1) * 10000, i * 10000);
         }
-        int flag2 = n % 10000;
-        for (int i = 0; i < flag2; i++){
-            count += f((i-1) + 10000 * flag1 , i + 10000 * flag1);
-        }
+        
+        count += f(n / 10000 * 10000, n);
+        
     }
     else {
         count += f(0, n);
     }
-    return count; //21.372839595118059
+    return count; 
 }

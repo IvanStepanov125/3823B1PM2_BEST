@@ -20,30 +20,30 @@ void write_smile(char filename[], char smile_names[]){
         if ((smile_names[i] == ',') || (i == len - 1)){ 
             i ++;
             str[k] = '\0';
-            if ((str[0] == 's') && (strlen(str) == 5))//'smile'
-                fprintf(fl, "%s%d", "(n_n)", 10);
-            else if ((str[0] == 'u') && (strlen(str) == 7))//"uh...oh"
-                fprintf(fl, "%s%d", "(._.)", 10);
-            else if ((str[0] == 'o') && (strlen(str) == 4)) // "ouch"
-                fprintf(fl, "%s%d", "(>_<)", 10);
-            else if ((str[0] == 'h') && (strlen(str) == 5))//"happy"
-                fprintf(fl, "%s%d", "(^_^)", 10);
-            else if ((str[0] == 'h') && (strlen(str) == 7))//"happier"
-                fprintf(fl, "%s%d", "*(^o^)*", 10);
-            else if ((str[0] == 's') && (strlen(str) == 3))//"sad"
-                fprintf(fl, "%s%d", "(!_!)", 10);
-            else if ((str[0] == 'b') && (strlen(str) == 5))//"bored"
-                fprintf(fl, "%s%d", "(=_=)", 10);
-            else if ((str[0] == 's') && (strlen(str) == 7))//"serious"
-                fprintf(fl, "%s%d", "(o_o)", 10);
-            else if ((str[0] == 'w') && (strlen(str) == 4))//"wink"
-                fprintf(fl, "%s%d", "(-_o)", 10);
-            else if ((str[0] == 'i') && (strlen(str) == 14))//"i messed it up"
-                fprintf(fl, "%s%d", "(-_-:)", 10);
-            else if ((str[0] == 'j') && (strlen(str) == 7))//"jealous"
-                fprintf(fl, "%s%d", "8(>_<)8", 10);
-            else if ((str[0] == 'i') && (strlen(str) == 9))//"i love it"
-                fprintf(fl, "%s%d", "(*-*)", 10);
+            if (strcmp(str, "smile") == 0)
+                fprintf(fl, "%s\n", "(n_n)");
+            else if (strcmp(str, "uh...oh") == 0)//"uh...oh"
+                fprintf(fl, "%s\n", "(._.)");
+            else if (strcmp(str, "ouch") == 0) // "ouch"
+                fprintf(fl, "%s\n", "(>_<)");
+            else if (strcmp(str, "happy") == 0)//"happy"
+                fprintf(fl, "%s\n", "(^_^)");
+            else if (strcmp(str, "happier") == 0)//"happier"
+                fprintf(fl, "%s\n", "*(^o^)*");
+            else if (strcmp(str, "sad") == 0)//"sad"
+                fprintf(fl, "%s\n", "(!_!)");
+            else if (strcmp(str, "bored") == 0)//"bored"
+                fprintf(fl, "%s\n", "(=_=)");
+            else if (strcmp(str, "serious") == 0)//"serious"
+                fprintf(fl, "%s\n", "(o_o)");
+            else if (strcmp(str, "wink") == 0)//"wink"
+                fprintf(fl, "%s\n", "(-_o)");
+            else if (strcmp(str, "i messed it up") == 0)//"i messed it up"
+                fprintf(fl, "%s\n", "(-_-:)");
+            else if (strcmp(str, "jealous") == 0)//"jealous"
+                fprintf(fl, "%s\n", "8(>_<)8");
+            else if (strcmp(str, "i love it") == 0)//"i love it"
+                fprintf(fl, "%s\n", "(*-*)");
             k = 0;
         }
     }
