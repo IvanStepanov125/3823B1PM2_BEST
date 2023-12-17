@@ -53,5 +53,6 @@ char* tree_writer(int n){
     otv[4] = 'x';
     otv[5] = 't';
     otv[6] = '\0';
+    
     return otv;
 }
