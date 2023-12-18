@@ -41,24 +41,74 @@ void write_smile(char filename[], char smile_names[]){
                 fputc('<', fl);
                 fputc(')', fl);
             }
-            // else if (strcmp(str, "happy") == 0)//"happy"
-            //     fprintf(fl, "%s", "(^_^)");
-            // else if (strcmp(str, "happier") == 0)//"happier"
-            //     fprintf(fl, "%s", "*(^o^)*");
-            // else if (strcmp(str, "sad") == 0)//"sad"
-            //     fprintf(fl, "%s", "(!_!)");
-            // else if (strcmp(str, "bored") == 0)//"bored"
-            //     fprintf(fl, "%s", "(=_=)");
-            // else if (strcmp(str, "serious") == 0)//"serious"
-            //     fprintf(fl, "%s", "(o_o)");
-            // else if (strcmp(str, "wink") == 0)//"wink"
-            //     fprintf(fl, "%s", "(-_o)");
-            // else if (strcmp(str, "i messed it up") == 0)//"i messed it up"
-            //     fprintf(fl, "%s", "(-_-:)");
-            // else if (strcmp(str, "jealous") == 0)//"jealous"
-            //     fprintf(fl, "%s", "8(>_<)8");
-            // else if (strcmp(str, "i love it") == 0)//"i love it"
-            //     fprintf(fl, "%s", "(*-*)");
+            else if (strcmp(str, "happy") == 0){//"happy"
+                fputc('(', fl);
+                fputc('^', fl);
+                fputc('_', fl);
+                fputc('^', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "happier") == 0){//"happier"
+                fputc('*', fl);
+                fputc('(', fl);
+                fputc('^', fl);
+                fputc('o', fl);
+                fputc('^', fl);
+                fputc(')', fl);
+                fputc('*', fl);
+            }
+            else if (strcmp(str, "sad") == 0){//"sad"
+                fputc('(', fl);
+                fputc('!', fl);
+                fputc('_', fl);
+                fputc('!', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "bored") == 0){//"bored"
+                fputc('(', fl);
+                fputc('=', fl);
+                fputc('_', fl);
+                fputc('=', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "serious") == 0){//"serious"
+                fputc('(', fl);
+                fputc('o', fl);
+                fputc('_', fl);
+                fputc('o', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "wink") == 0){//"wink"
+                fputc('(', fl);
+                fputc('-', fl);
+                fputc('_', fl);
+                fputc('o', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "i messed it up") == 0){//"i messed it up"
+                fputc('(', fl);
+                fputc('-', fl);
+                fputc('_', fl);
+                fputc('-', fl);
+                fputc(':', fl);
+                fputc(')', fl);
+            }
+            else if (strcmp(str, "jealous") == 0){//"jealous"
+                fputc('8', fl);
+                fputc('(', fl);
+                fputc('>', fl);
+                fputc('_', fl);
+                fputc('<', fl);
+                fputc(')', fl);
+                fputc('8', fl);
+            }
+            else if (strcmp(str, "i love it") == 0){//"i love it"
+                fputc('(', fl);
+                fputc('*', fl);
+                fputc('-', fl);
+                fputc('*', fl);
+                fputc(')', fl);
+            }
             k = 0;
             
         }
