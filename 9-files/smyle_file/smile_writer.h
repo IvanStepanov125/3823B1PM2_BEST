@@ -109,6 +109,7 @@ void write_smile(char filename[], char smile_names[]){
                 fputc('*', fl);
                 fputc(')', fl);
             }
+            
             k = 0;
             
         }
