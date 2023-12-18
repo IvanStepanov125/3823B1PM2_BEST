@@ -5,7 +5,7 @@
 
 char* tree_writer(int n){
     FILE* fl;
-    fl = fopen("dz.txt", "w");
+    fl = fopen("dz.txt", "wb");
     for (int i = 0; i < n-1; i ++){
         fputc(' ', fl);
     }
