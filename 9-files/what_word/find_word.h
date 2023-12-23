@@ -33,10 +33,10 @@ void zapis_podchet(char** slovar, char* t, int* col){
 
 char* get_word(char filename[], unsigned int how_many_times){
     int col[1000];
-    char** slovar = malloc(sizeof(char*) * 1000);
+    char** slovar = malloc(sizeof(char**) * 1000);
     for(int i = 0; i < 1000; i++){
         col[i] = 0;
-        char* slovo = malloc(sizeof(char) * 150);
+        char* slovo = malloc(sizeof(char*) * 150);
         for (int j = 0; j < 150; j++){
             slovo[j] = '0';
         }
