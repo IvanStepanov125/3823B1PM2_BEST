@@ -8,6 +8,7 @@ unsigned int get_fileinfo(char filename[], unsigned int* abzac_num, unsigned int
     FILE* tr;
     tr = fopen(filename, "r");
     printf("%p\n", tr);
+    fflush(stdout);
     unsigned int col_slov = 0;
     while (feof(tr) == 0){
         char* sl = malloc(sizeof(char*) * 150);
