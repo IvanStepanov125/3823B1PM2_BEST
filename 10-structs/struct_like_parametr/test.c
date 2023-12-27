@@ -15,7 +15,7 @@ void test_persons_structs() {
         {"Luck", "Muck", {11, 11, 2011}},
         {"Kalaka", "Malaka", {15, 12, 1945}},
     };
-    TEST_ASSERT(fabs(calc_avg_age(persons1, 15) - 35.2) < eps);
+    TEST_ASSERT(fabs(calc_avg_age(persons2, 5) - 35.2) < eps);
 
     Person persons3[] = {
         {"Denis", "Karchkov", {29, 7, 1994}},
